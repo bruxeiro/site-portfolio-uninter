@@ -1,0 +1,196 @@
+/* Modo escuro fixo */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-size: 18px; 
+    font-family: Arial, sans-serif;
+    line-height: 1.8; 
+    background-color: #121212; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro */
+    display: flex;
+    flex-direction: column; /* Garante que o layout seja flexível e em coluna */
+}
+
+header {
+    background-color: #1f1f1f; /* Fundo escuro para o cabeçalho */
+    color: white;
+    padding: 1rem 0;
+    top: 0;
+}
+
+nav ul {
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px; 
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold;
+} 
+
+nav ul li a:hover {
+    color: #9b30ff; /* Cor de destaque ao passar o mouse */
+}
+
+main {
+    flex: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+    padding: 20px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+footer {
+    background-color: #1f1f1f; /* Fundo escuro pro rodape */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+}
+
+/* Estilos especpíficos para cada seção */
+.banner {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: inherit; /* Herda o fundo do corpo */
+    color: inherit; /* Herda a cor do texto */
+}
+
+.banner-links {
+    margin-top: 20px;
+    font-size: 1.2rem; 
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+}
+
+.banner-links a {
+    padding: 10px 20px; 
+    background-color: #6a0dad; /* Cor de fundo dos botões (roxo) */
+    color: #ffffff; 
+    text-decoration: none;
+    border-radius: 5px; 
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Animação ao passar o mouse */
+}
+
+.banner-links a:hover {
+    background-color: #9b30ff; /* Cor de fundo ao passar o mouse (roxo mais claro) */
+    color: #ffffff; /* Cor do texto ao passar o mouse */
+}
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.sobre img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Torna a imagem circular */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    margin-bottom: 20px;
+}
+
+
+.portfolio {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 20px;
+    gap: 20px; 
+}
+
+.portfolio h1 {
+    text-align: center; /* Centraliza o título */
+    color: #ffffff; /* Cor do texto */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+.projeto {
+    background-color: #1f1f1f; 
+    color: #e0e0e0; 
+    border-radius: 8px; 
+    padding: 15px;
+    width: 300px; 
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação ao passar o mouse */
+}
+
+.projeto:hover {
+    transform: scale(1.05); /* Aumenta levemente o tamanho ao passar o mouse */
+}
+
+.projeto img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do container */
+    border-radius: 5px; 
+    margin-bottom: 10px;
+}
+
+.projeto a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #6a0dad; /* Fundo roxo */
+    color: #ffffff; /* Texto branco */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.projeto a:hover {
+    background-color: #9b30ff; /* Fundo roxo mais claro ao passar o mouse */
+}
+
+/* Estilos do formulário */
+.form-caixa {
+    margin-bottom: 15px; /* Espaçamento entre os campos do formulário */
+}
+
+.form-caixa label {
+    display: block;
+    margin-bottom: 5px; /* Espaçamento entre o rótulo e o campo */
+}
+
+.form-caixa input,
+.form-caixa textarea {
+    width: 100%; /* Garante que os campos ocupem toda a largura disponível */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px; 
+}
+
+button {
+    background-color: #2c3e50; /* Cor de fundo do botão */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* Indica que o elemento é clicável */
+}
+
+button:hover {
+    background-color: #f39c12; /* Cor de fundo ao passar o mouse */
+}
+
+/* Para melhorar a responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Alinha os itens verticalmente em telas menores */
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+}
